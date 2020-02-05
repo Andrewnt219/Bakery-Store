@@ -6,8 +6,6 @@
     --lpink: #FFB58A;
     --brown: #E8AE72;
     --lbrown: #FFD07D;
-    letter-spacing: 1.5px;
-    line-height: 1.6;
 }
 
 * {
@@ -70,11 +68,13 @@ main {
 }
 
 h1 {
-    font-size: 2.5rem;
     text-align: center;
     margin: 1rem;
     color:var(--lbrown);
+<<<<<<< HEAD
     letter-spacing: 3px;
+=======
+>>>>>>> parent of 823a8bf... border-radius
 }
 
 footer {
@@ -107,13 +107,12 @@ footer a{
     font-size: 2rem;
     display: inline-block;
 }
-
 /* Home */
+
 .promotion-banner {
 max-width: 100%;
 height: auto;
 margin-top: 2rem;
-border-radius: 5px;
 }
 
 .categories {
@@ -140,8 +139,11 @@ border-radius: 5px;
     margin:0;
     font-size: 2rem;
     text-align: left;
+<<<<<<< HEAD
     color:var(--lbrown);
     letter-spacing: 1.5px;
+=======
+>>>>>>> parent of 823a8bf... border-radius
 }
 .text a {
     box-sizing: border-box;
@@ -157,15 +159,18 @@ border-radius: 5px;
     width: 100%;
     text-align: center;
 }
-.category img, .best-seller img {
-  width: 350px;
-  height: 300px;
-  border-radius: 5px;
+.category img {
+  width: 250px;
+  height: 200px;
 }
 
 .best-sellers {
     white-space: nowrap;
     overflow-x: scroll;
+}
+.best-seller img {
+    width: 250px;
+    height: 200px;
 }
 
 ::-webkit-scrollbar {
@@ -249,4 +254,6 @@ input[type="submit"] {
 input[type="submit"]:hover {
     transform: translateY(2px);
     cursor: pointer;
+
+
 }
