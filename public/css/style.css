@@ -1,0 +1,250 @@
+:root {
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+    --pink:#FF877D;
+    --epink: #E88C72;
+    --lpink: #FFB58A;
+    --brown: #E8AE72;
+    --lbrown: #FFD07D;
+}
+
+* {
+    margin:0;
+    padding:0;
+    color:white;
+    text-decoration: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+header>a {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+p.header {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:var(--lbrown);
+    font-size: 2rem;
+    font-weight: bold;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    height: 3rem;
+    background: var(--epink);
+}
+nav li {
+    cursor: pointer;
+    list-style: none;
+    display:flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width:100%;
+    justify-content: center;
+    transition: 0.5s;
+}
+nav li:hover {
+    background-color: var(--pink);
+    font-size: 2rem;
+}
+
+main {
+    width: 90%;
+    margin:auto;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+}
+
+h1 {
+    text-align: center;
+    margin: 1rem;
+    color:var(--lbrown);
+}
+
+footer {
+    margin-top:10rem;
+    background-color: #333;
+    display: flex;
+    padding:1rem;
+    align-items: center;
+}
+.media {
+    flex:1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.term {
+    flex:3;
+}
+.src {
+    flex:2;
+}
+footer a{
+    text-decoration:underline;
+}
+.term li{
+    list-style: none;
+    display: inline-block;
+}
+.media i {
+    font-size: 2rem;
+    display: inline-block;
+}
+/* Home */
+
+.promotion-banner {
+max-width: 100%;
+height: auto;
+margin-top: 2rem;
+}
+
+.categories {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   column-gap: 1rem;
+   row-gap: 2rem;
+   margin-bottom: 5rem;
+}
+
+.category {
+    display: flex;
+    text-decoration: none;
+}
+
+.category .text {
+    margin-left: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.text h1 {
+    margin:0;
+    font-size: 2rem;
+    text-align: left;
+}
+.text a {
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 1rem;
+    width: max-content;
+    transition: 1s ease-in;
+}
+.text a:hover {
+    border: 2px solid var(--pink);
+    color:var(--pink);
+    width: 100%;
+    text-align: center;
+}
+.category img {
+  width: 250px;
+  height: 200px;
+}
+
+.best-sellers {
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+.best-seller img {
+    width: 250px;
+    height: 200px;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+
+}
+::-webkit-scrollbar-thumb {
+    background: var(--brown);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 5px;
+
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--lbrown);
+}
+
+/* Register */
+.register {
+    width: 100%;
+}
+
+.register form {
+    width:max-content;
+    margin:auto;
+}
+
+/* Utils */
+.hidden {
+    display:none;
+}
+
+.lock {
+    overflow: hidden;
+}
+
+.center-block {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.right-block {
+    display: block;
+    float: right;
+}
+.left-block {
+    display: block;
+   float: left;
+}
+
+.backdrop {
+    margin-top: 1rem;
+    background-color: var(--brown);
+    overflow: hidden;
+}
+
+
+section form {
+    padding: 1rem;
+    line-height: 1.6;
+    
+}
+
+input {
+    color: black;
+}
+
+input[type="submit"],button {
+    padding: 0.5rem;
+}
+input[type="submit"] {
+    width: 100%;
+    margin-top: 1rem;
+    border: 2px solid white;
+    background-color: var(--brown);
+    color:white;
+    box-shadow: 2px 2px 2px #333;
+}
+input[type="submit"]:hover {
+    transform: translateY(2px);
+    cursor: pointer;
+
+
+}
