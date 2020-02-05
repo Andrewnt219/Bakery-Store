@@ -2,7 +2,7 @@
     <form action="/" method="POST">
         <label for="">Username <br><input type="text" required></label>
         <br>
-        <label for="">Password <br><input type="text" required></label>
+        <label for="">Password <br><input type="password" required></label>
         <br>
         <input type="submit" value="Login">
     </form>
@@ -35,7 +35,7 @@
             <div class="text">
                 <h1 class="category-name">{{this.name}}</h1>
                 <p class="catergory-desc">{{this.desc}}</p>
-                <a href="/products">Explore {{this.name}}</a>
+                <a href="/products/{{this.name}}">Explore {{this.name}}</a>
             </div>
         </div>
         {{/each}}

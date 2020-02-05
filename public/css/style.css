@@ -39,7 +39,7 @@ nav {
     display: flex;
     justify-content: space-around;
     height: 3rem;
-    background: var(--epink);
+    background: inherit;
 }
 nav a {
     cursor: pointer;
@@ -149,12 +149,11 @@ border-radius: 5px;
     border-radius: 5px;
     padding: 1rem;
     width: max-content;
-    transition: 1s ease-in;
+    transition: 0.5s;
 }
 .text a:hover {
     border: 2px solid var(--pink);
     color:var(--pink);
-    width: 100%;
     text-align: center;
 }
 .category img {
@@ -230,7 +229,7 @@ border-radius: 5px;
     border: 2px white solid;
     border-radius: 5px;
     margin-top: 1rem;
-    background-color: var(--brown);
+    background-color: var(--pink);
     overflow: hidden;
 }
 
@@ -254,7 +253,7 @@ input[type="submit"] {
     width: 100%;
     margin-top: 1rem;
     border: 2px solid white;
-    background-color: var(--brown);
+    background-color: inherit;
     color:white;
     box-shadow: 2px 2px 2px #333;
 }
