@@ -6,6 +6,8 @@
     --lpink: #FFB58A;
     --brown: #E8AE72;
     --lbrown: #FFD07D;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
 }
 
 * {
@@ -68,9 +70,11 @@ main {
 }
 
 h1 {
+    font-size: 2.5rem;
     text-align: center;
     margin: 1rem;
-    color:var(--lbrown);
+    color:var(--brown);
+    letter-spacing: 3px;
 }
 
 footer {
@@ -103,12 +107,13 @@ footer a{
     font-size: 2rem;
     display: inline-block;
 }
-/* Home */
 
+/* Home */
 .promotion-banner {
 max-width: 100%;
 height: auto;
 margin-top: 2rem;
+border-radius: 5px;
 }
 
 .categories {
@@ -135,6 +140,8 @@ margin-top: 2rem;
     margin:0;
     font-size: 2rem;
     text-align: left;
+    color:var(--lbrown);
+    letter-spacing: normal;
 }
 .text a {
     box-sizing: border-box;
@@ -150,18 +157,15 @@ margin-top: 2rem;
     width: 100%;
     text-align: center;
 }
-.category img {
-  width: 250px;
-  height: 200px;
+.category img, .best-seller img {
+  width: 350px;
+  height: 300px;
+  border-radius: 5px;
 }
 
 .best-sellers {
     white-space: nowrap;
     overflow-x: scroll;
-}
-.best-seller img {
-    width: 250px;
-    height: 200px;
 }
 
 ::-webkit-scrollbar {
@@ -245,6 +249,4 @@ input[type="submit"] {
 input[type="submit"]:hover {
     transform: translateY(2px);
     cursor: pointer;
-
-
 }
