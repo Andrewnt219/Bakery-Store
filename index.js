@@ -18,16 +18,27 @@ app.get('/',(req,res) => {
         title: 'Home Page',
         categories:categories,
         bestSellers:bestSellers,
-        banners:banners
+        banners:banners,
+        homeActive: true
     });
 })
  
 app.get('/products',(req,res) => {
     res.render('products', {
-        title: 'Products'
+        title: 'Products',
+        productsActive: true,
+        categories:categories,
+
     });
 })
  
+for (let category of categories) {
+    app.get(`/products/${category}`, (req,res) => {
+        res.render('products', {
+            category: category,
+        })
+    })
+}
 /* app.get('/register',(req,res) => {
     res.render('register', {
         title: 'Register'

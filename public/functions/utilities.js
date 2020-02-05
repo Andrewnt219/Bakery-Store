@@ -1,6 +1,12 @@
-function display(node) {
-    console.log('display called')
-    const show = document.querySelector(`section.${node}`);
-    show.classList.toggle('hidden');
-    show.classList.toggle('right-block');
+function display(e, hiddenSection) {
+        const hidden = document.querySelector(`section.${hiddenSection}`) || null;
+        const navA = document.querySelectorAll('nav a');
+        navA.forEach(a => {
+            a.classList.toggle('unfocus');
+        })
+        if (hidden) {
+            hidden.classList.toggle('hidden');
+            hidden.classList.toggle('right-block');
+        }
+        e.classList.toggle('active');
 }

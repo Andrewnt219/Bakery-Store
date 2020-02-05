@@ -18,10 +18,10 @@
         </a>
     </header>
     <nav>
-        <li><a href="/">Home</a></li>
-        <li><a href="/products">Products</a></li>
-        <li onclick="display('register')">Register</li>
-        <li onclick="display('login')">Login</li>
+        <a class="{{#if homeActive}}active{{/if}}" href="/"><li >Home</li></a>
+        <a class="{{#if productsActive}}active{{/if}}" href="/products"><li >Products</li></a>
+        <a onclick="display(this,'register')"><li >Register</li></a>
+        <a  onclick="display(this,'login')"><li >Login</li></a>
     </nav>
     <main>
         {{{body}}}
