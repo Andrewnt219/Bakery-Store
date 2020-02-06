@@ -34,9 +34,8 @@ app.get('/products',(req,res) => {
  
 for (let category of categories) {
     app.get(`/products/:category`, (req,res) => {
-        category
         res.render('products', {
-            category: req.params.category,
+            category: category.name,
             productsActive: true
         })
     })

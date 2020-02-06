@@ -11,18 +11,59 @@
 </head>
 
 <body>
+
+
     <header>
         <a href="/">
             <img class="icon logo" src="/img/logo.svg" alt="logo">
             <p class="header">Andrew's Bakery</p>
         </a>
     </header>
+
+
     <nav>
-        <a class="{{#if homeActive}}active{{/if}}" href="/"><li >Home</li></a>
-        <a class="{{#if productsActive}}active{{/if}}" href="/products"><li >Products</li></a>
-        <a onclick="display(this,'register')"><li >Register</li></a>
-        <a  onclick="display(this,'login')"><li >Login</li></a>
+        <a class="{{#if homeActive}}active{{/if}}" href="/">
+            <li>Home</li>
+        </a>
+        <a class="{{#if productsActive}}active{{/if}}" href="/products">
+            <li>Products</li>
+        </a>
+        <a onclick="display(this,'register')">
+            <li>Register</li>
+        </a>
+        <a onclick="display(this,'login')">
+            <li>Login</li>
+        </a>
     </nav>
+
+
+    <section class="login hidden backdrop">
+        <form action="/" method="POST">
+            <label for="">Username <br><input type="text" required></label>
+            <br>
+            <label for="">Password <br><input type="text" required></label>
+            <br>
+            <input type="submit" value="Login">
+        </form>
+    </section>
+
+
+    <section class="register hidden backdrop">
+
+        <form action="/" method="POST">
+            <label for="">Username <br><input type="text" required autofocus></label>
+            <br>
+            <label for="">Password <br><input type="password" required></label>
+            <br>
+            <label for="">Email<br><input type="email" required></label>
+            <br>
+            <label for="">Phone number <br><input type="tel"></label>
+            <br>
+            <input type="submit" value="Sign up">
+        </form>
+    </section>
+
+
     <main>
         {{{body}}}
     </main>
@@ -63,6 +104,20 @@
             Photo by Joshua Moussa on Unsplash <br>
             Photo by Ishan @seefromthesky on Unsplash <br>
             Photo by Tomasz Pikus on Unsplash <br>
+            Photo by Cristina Matos-Albers on Unsplash <br> 
+            Photo by Anthony Rosset on Unsplash <br>
+            Photo by Gary Moreton-jones on Unsplash <br>
+            Photo by Nickie Joseph on Unsplash <br>
+            Photo by peanut butter on Unsplash <br>
+            Photo by Alana Harris on Unsplash <br>
+            Photo by Cozinha à la Carte on Unsplash <br>
+            Photo by Alexandra Kusper on Unsplash <br>
+            Photo by Sergio Arze on Unsplash <br>
+            Photo by Louis Hansel @shotsoflouis on Unsplash <br>
+            Photo by Sorasak on Unsplash <br>
+            Photo by Foto T on Unsplash <br>
+            Photo by Flavio Shibata on Unsplash <br>
+            
         </section>
     </footer>
 </body>
