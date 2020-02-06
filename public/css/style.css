@@ -234,6 +234,7 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    min-width: 250px;
 }
 
 .info p {
