@@ -53,6 +53,7 @@ app.get('/products/:name', (req, res) => {
 
     res.render('products', {
         obj:obj,
-        productsActive: true
+        productsActive: true,
+        title: obj.name
     })
 })

@@ -35,6 +35,7 @@
             <li>Login</li>
         </a>
     </nav>
+
     <div class="form">
         <section class="login hidden backdrop">
             <form action="/" method="POST">
@@ -50,14 +51,16 @@
         <section class="register hidden backdrop">
 
             <form action="/" method="POST">
-                <label for="">Username <br><input type="text" required autofocus></label>
-                <br>
-                <label for="">Password <br><input type="password" required></label>
-                <br>
-                <label for="">Email<br><input type="email" required></label>
-                <br>
-                <label for="">Phone number <br><input type="tel"></label>
-                <br>
+                <label for="username">Username </label>
+                <input type="text" name="username" required>
+                <label for="password">Password </label>
+                <input type="password" name="password" required placeholder="At least 6 characters">
+                <label for="passwordAgain">Password Again</label>
+                <input type="password" name="passwordAgain" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" required>
+                <label for="phone">Phone number </label>
+                <input type="tel" name="phone">
                 <input type="submit" value="Sign up">
             </form>
         </section>
