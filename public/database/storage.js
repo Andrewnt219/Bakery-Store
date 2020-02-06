@@ -1,58 +1,33 @@
-class Storage {
-    constructor(products) {
-        this.products = products || [];
-        this.noOfProducts = 0;
-        this.bestSellers = [];
-        for (let product of this.products) {
-            if (product.bestSeller)
-                this.bestSellers.push(product);
-        }
-    }
-    add(product) {
-        this.products.push(product);
-        return ++this.noOfProducts;
-    }
-    /* THIS WILL GET DUPLICATE, NEED FIXING */
-    update() {
-        if (this.products.length > 0) {
-            for (let product of this.products) {
-                if (product.bestSeller)
-                    this.bestSellers.push(product);
-            }
-        }
-    }
-}
-
-class Category extends Storage {
-    constructor(name, img, desc, products) {
-        super();
+class Category {
+    constructor(name, img, desc, products, mode) {
         this.name = name || "Literally forgot to name";
         this.img = img || "";
         this.desc = desc || "";
-        this.products = super.products;
+        if(!mode)
+        this.products = products.filter(product => this.name === product.category);
+        else
+        this.products = products.filter(product => product[mode]);
+        this.size = this.products.length;
     }
-    update() {
-        // NEED TO FIGURE OUT HOW TO ACCESS PARENT VARIABLE
-        
-        // let products = [...super.products];
-        // for (let product of products) {
-        //     if (product.category == this.name)
-        //         this.add(product);
-        // }
-        // return this.noOfProducts;
+    add(product) {
+        for (let p of this.products) {
+            if(product.name === p.name)
+                return;
+        }
+        this.products.push(product);
     }
 
 }
 
 class Product {
-    constructor(name, price, bestSeller, src, category, rating) {
+    constructor(name, price, bestSeller, src, category) {
         this.name = name || "404";
         this.price = price || 0;
         this.bestSeller = bestSeller || false;
         this.src = src || '__err_404';
         this.category = category || 'other';
         this.link = encodeURI(`/products/${this.name}`);
-        this.rating = this.bestSeller?(Math.random() * 1 + 4).toFixed(1):(Math.random() * 5).toFixed(1);
+        this.rating = this.bestSeller?(Math.random() * 1 + 4).toFixed(1):(Math.random() * 3 + 2).toFixed(1);
     }
 }
 
@@ -158,7 +133,7 @@ const product14 = new Product(
     'Chocolate Parfait 2',
     7.99,
     false,
-    '/img/products/pf-0.jpg',
+    '/img/products/pf-1.jpg',
     'Parfait'
 );
 const product15 = new Product(
@@ -211,28 +186,20 @@ const product21 = new Product(
     'Yogurt'
 );
 
-const storage = new Storage();
-
+const products = [];
 for (let i = 0; i < 22; i++) {
-    storage.add(eval(`product${i}`));
+    products.push(eval(`product${i}`));
 }
 
-const brownies = new Category('Brownies', 'category-brownies.jpg', 'A chocolate brownie is a square or rectangular, chocolate baked treat. Brownies come in a variety of forms and may be either fudgy or cakey, depending on their density');
-const cheesecake = new Category('Cheese Cakes', 'category-cheese-cake.jpg', 'Cheesecake is a sweet dessert consisting of one or more layers. The main, and thickest layer, consists of a mixture of soft, fresh cheese, eggs, and sugar');
-const parfait = new Category('Parfait', 'category-parfait.jpg', 'Parfait is two types of frozen dessert; in France, where the dish originated, parfait is made by boiling cream, egg, sugar and syrup to create a custard-like puree');
-const yogurt = new Category('Yogurt', 'category-yogurt.jpg', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore harum porro minus. Unde debitis iste quas enim sed quia, laboriosam velit nemo?');
-const others = new Category('Others', 'category-others.jpg', 'Assorted desserts and more ...')
-
-
-storage.update();
-brownies.update();
-cheesecake.update();
-parfait.update();
-yogurt.update();
-others.update();
+const brownies = new Category('Brownies', 'category-brownies.jpg', 'A chocolate brownie is a square or rectangular, chocolate baked treat. Brownies come in a variety of forms and may be either fudgy or cakey, depending on their density',products);
+const cheesecake = new Category('Cheese Cakes', 'category-cheese-cake.jpg', 'Cheesecake is a sweet dessert consisting of one or more layers. The main, and thickest layer, consists of a mixture of soft, fresh cheese, eggs, and sugar',products);
+const parfait = new Category('Parfait', 'category-parfait.jpg', 'Parfait is two types of frozen dessert; in France, where the dish originated, parfait is made by boiling cream, egg, sugar and syrup to create a custard-like puree',products);
+const yogurt = new Category('Yogurt', 'category-yogurt.jpg', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore harum porro minus. Unde debitis iste quas enim sed quia, laboriosam velit nemo?',products);
+const others = new Category('Others', 'category-others.jpg', 'Assorted desserts and more ...',products)
+const bestSellers = new Category('Best Sellers','','The most wanted desserts', products, 'bestSeller')
 
 const categories = [brownies, cheesecake, parfait, yogurt, others]
 
-module.exports.products = storage.products;
+module.exports.products = products;
 module.exports.categories = categories;
-module.exports.bestSellers = storage.bestSellers;
+module.exports.bestSellers = bestSellers;

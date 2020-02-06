@@ -6,7 +6,6 @@ function display(e, hiddenSection) {
         })
         if (hidden) {
             hidden.classList.toggle('hidden');
-            hidden.classList.toggle('right-block');
         }
         e.classList.toggle('active');
 }

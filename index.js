@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
     res.render('home', {
         title: 'Home Page',
         categories: storage.categories,
-        bestSellers: storage.bestSellers,
+        bestSellers: storage.bestSellers.products,
         banners: banners,
         homeActive: true
     });
@@ -26,7 +26,7 @@ app.get('/products', (req, res) => {
     res.render('products', {
         title: 'Products',
         productsActive: true,
-        products: storage.products,
+        obj: storage.products,
     });
 })
 

@@ -13,20 +13,22 @@
         </div>
         <img src="{{obj.src}}" alt="Product image">
     </article>
+
     {{else if obj.name}}
     <h1>Category: {{obj.name}}</h1>
+
     {{/if}}
+
     <article class="productList">
-        <p>{{obj.noOfProducts}}</p>
-        {{#if obj.noOfProducts}}
-        <p>List</p>
         {{#each obj.products}}
+        <a href="{{this.link}}"><img title="{{this.name}}" src="{{this.src}}" alt="{{this.name}}"></a>
         {{/each}}
-        {{/if}}
+        {{#each obj}}
+        <a href="{{this.link}}"><img title="{{this.name}}" src="{{this.src}}" alt="{{this.name}}"></a>
+        {{/each}}
     </article>
 </section>
 
-<aside></aside>
 
 {{!-- Insert Register and Login through variable --}}
 {{!-- Change category base on received variable, so I have to have a product page template and then just dynamically insert data --}}

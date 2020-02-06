@@ -64,6 +64,19 @@ main {
     margin:auto;
 }
 
+.form {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.form .register {
+    grid-column: 2/4;
+}
+
+.form .login {
+    grid-column: 4/5;
+}
+
 .icon {
     width: 60px;
     height: 60px;
@@ -193,7 +206,7 @@ border-radius: 5px;
     width: 100%;
 }
 
-.register form {
+form {
     width:max-content;
     margin:auto;
 }
@@ -240,7 +253,7 @@ border-radius: 5px;
     font-size: 2rem;
     margin: 0;
     color: whitesmoke;
-    width: max-content;
+    max-width: 250px;
     text-align: unset;
 }
 
@@ -256,6 +269,23 @@ border-radius: 5px;
 .product button:active {
     transform: translate(2px, 2px);
 }
+
+/* Category */
+.productList {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1rem;
+
+}
+.productList img {
+    width: 350px;
+    height: 300px;
+    border-radius: 5%;
+}
+
+
 /* Utils */
 .active {
     border-bottom: 5px solid white;
@@ -286,16 +316,16 @@ border-radius: 5px;
 .backdrop {
     border: 2px white solid;
     border-radius: 5px;
-    margin-top: 1rem;
+    margin: 1rem 0 1rem auto;
     background-color: var(--pink);
-    overflow: hidden;
+    width: 100%;
 }
 
 
 section form {
     padding: 1rem;
     line-height: 1.6;
-    
+    margin-bottom: 1rem;
 }
 
 input {
