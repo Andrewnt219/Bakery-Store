@@ -10,3 +10,11 @@ function display(e, hiddenSection) {
         }
         e.classList.toggle('active');
 }
+
+(function rating() {
+    const p = document.querySelector('p.rating');
+    if (Number(p.textContent) > 4.0)
+        p.classList.add('good');
+    else
+        p.classList.add('bad');
+})();

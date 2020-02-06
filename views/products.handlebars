@@ -1,8 +1,32 @@
-
-
 <section class="products">
-    <h1>{{category}}</h1>
+    {{#if obj.category}}
+    <h1>Category: {{obj.category}}</h1>
+    <article class="product">
+        <div class="info">
+            <h1 class="productName">{{obj.name}}</h1>
+            <p class="productPrice"><i style="font-size:2rem" class="fas fa-dollar-sign"></i>{{obj.price}}</p>
+            <p class="rating"><i style="font-size:2rem" class="fas fa-star"></i>{{obj.rating}}</p>
+            {{#if obj.bestSeller}}
+            <p><i style="font-size:2rem" class="fas fa-award"></i>Best Seller</p>
+            {{/if}}
+            <button>Order now</button>
+        </div>
+        <img src="{{obj.src}}" alt="Product image">
+    </article>
+    {{else if obj.name}}
+    <h1>Category: {{obj.name}}</h1>
+    {{/if}}
+    <article class="productList">
+        <p>{{obj.noOfProducts}}</p>
+        {{#if obj.noOfProducts}}
+        <p>List</p>
+        {{#each obj.products}}
+        {{/each}}
+        {{/if}}
+    </article>
 </section>
+
+<aside></aside>
 
 {{!-- Insert Register and Login through variable --}}
 {{!-- Change category base on received variable, so I have to have a product page template and then just dynamically insert data --}}

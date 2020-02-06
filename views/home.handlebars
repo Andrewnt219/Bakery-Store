@@ -20,8 +20,8 @@
     <h1>Best sellers</h1>
     <section class="best-sellers">
         {{#each bestSellers}}
-        <a href="{{this.href}}" class="best-seller">
-            <img title="{{this.name}}" src="/img/{{this.img}}" alt="Best Seller: {{this.name}}">
+        <a href="{{this.link}}" class="best-seller">
+            <img title="{{this.name}}" src="{{this.src}}" alt="Best Seller: {{this.name}}">
         </a>
         {{/each}}
     </section>
