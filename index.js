@@ -62,6 +62,8 @@ app.get('/products/:name', (req, res) => {
 
 app.post('/', (req,res) => {
     const {username, password, passwordAgain, phone, email} = req.body;
+    const _username = "I like"
+    const _password = "1102"
     res.render('form', {
         info:req.body
     })
