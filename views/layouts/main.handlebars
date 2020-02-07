@@ -43,6 +43,7 @@
                 <br>
                 <label for="">Password <br><input type="password" name="password" required></label>
                 <br>
+                <div class="error"></div>
                 <input type="submit" value="Login">
             </form>
         </section>
@@ -51,16 +52,17 @@
         <section class="register hidden backdrop">
 
             <form action="/" method="POST" id="register">
-                <label for="username">Username </label>
+                <label for="username">Username</label>
                 <input type="text" name="username" required>
-                <label for="password">Password </label>
-                <input type="password" name="password" required placeholder="At least 6 characters">
+                <label for="password">Password</label>
+                <input type="password" name="password" required>
                 <label for="passwordAgain">Password Again</label>
                 <input type="password" name="passwordAgain" required>
                 <label for="email">Email</label>
                 <input type="email" name="email" required>
                 <label for="phone">Phone number </label>
                 <input type="tel" name="phone">
+                <div class="error"></div>
                 <input type="submit" value="Sign up">
             </form>
         </section>
