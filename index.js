@@ -1,7 +1,8 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
-const storage = require('./public/database/storage')
-const banners = require('./public/database/banners')
+const bodyParser = require('body-parser');
+const storage = require('./public/database/storage');
+const banners = require('./public/database/banners');
 
 const app = express();
 app.engine('handlebars', exphbs());
@@ -11,6 +12,7 @@ const PORT = process.env.PORT || 3000
 app.listen(PORT, () => console.log('Web Server is running at ' + PORT + ' ...'));
 
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({extended: false}));
 
 app.get('/', (req, res) => {
     res.render('home', {
@@ -55,5 +57,12 @@ app.get('/products/:name', (req, res) => {
         obj:obj,
         productsActive: true,
         title: obj.name
+    })
+})
+
+app.post('/', (req,res) => {
+    const {username, password, passwordAgain, phone, email} = req.body;
+    res.render('form', {
+        info:req.body
     })
 })

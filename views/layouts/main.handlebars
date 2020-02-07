@@ -28,20 +28,20 @@
         <a class="{{#if productsActive}}active{{/if}}" href="/products">
             <li>Products</li>
         </a>
-        <a onclick="display(this,'register')">
+        <a id="register-button">
             <li>Register</li>
         </a>
-        <a onclick="display(this,'login')">
+        <a id="login-button">
             <li>Login</li>
         </a>
     </nav>
 
     <div class="form">
-        <section class="login hidden backdrop">
+        <section class="login hidden backdrop" id="login" >
             <form action="/" method="POST">
-                <label for="">Username <br><input type="text" required></label>
+                <label for="">Username <br><input type="text" name="username" required></label>
                 <br>
-                <label for="">Password <br><input type="text" required></label>
+                <label for="">Password <br><input type="password" name="password" required></label>
                 <br>
                 <input type="submit" value="Login">
             </form>
@@ -50,7 +50,7 @@
 
         <section class="register hidden backdrop">
 
-            <form action="/" method="POST">
+            <form action="/" method="POST" id="register">
                 <label for="username">Username </label>
                 <input type="text" name="username" required>
                 <label for="password">Password </label>
