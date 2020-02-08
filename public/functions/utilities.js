@@ -53,7 +53,7 @@ const loginButton = document.querySelector('#login-button');
 registerButton.addEventListener('click', display);
 loginButton.addEventListener('click', display);
 register.addEventListener('submit', registerValidation);
-login.addEventListener('submit', loginValidation);
+// login.addEventListener('submit', loginValidation);
 register.password.addEventListener('change', visualizedRequirement)
 
 /* functions */
@@ -173,18 +173,19 @@ function registerValidation(e) {
     }
 }
 
-function loginValidation(e) {
-    const username = login.username.value.trim();
-    const password = login.password.value.trim();
-    const _username = "iLike"
-    const _password = "1102"
+// function loginValidation(e) {
+//     const username = login.username.value.trim();
+//     const password = login.password.value.trim();
+//     const _username = "iLike"
+//     const _password = "1102"
 
-    const valid = username === _username && password === _password;
+    
+//     const valid = username === _username && password === _password;
 
-    if (!valid) {
-        e.preventDefault();
-        addError(["Username or password is incorrect!"], login);
-    }
-    else
-        return true;
-}   
+//     if (!valid) {
+//         e.preventDefault();
+//         addError(["Username or password is incorrect!"], login);
+//     }
+//     else
+//         return true;
+// }   

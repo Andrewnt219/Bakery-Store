@@ -1,2 +1,13 @@
+
+{{#if info}}
 <h1>Form submitted</h1>
 <h2>Psst! {{info.username}}, never give password to untrusted websites: {{info.password}}</h2>
+{{/if}}
+
+{{#if user}}
+<h1>Welcome back, {{user.username}}</h1>
+<h3>email: {{user.email}}</h3>
+<h3>phone: {{user.phone}}</h3>
+{{else}}
+<h1 class="error">{{error}}</h1>
+{{/if}}

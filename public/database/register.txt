@@ -1,0 +1,4 @@
+{"username":"dsa","password":"F41lur3@Reminder","passwordAgain":"F41lur3@Reminder","email":"andrewnt219@gmail.com","phone":"6477454643"}
+{"username":"312321","password":"F41lur3@Reminder","passwordAgain":"F41lur3@Reminder","email":"phongnguyentuan20@gmail.com","phone":"6477454643"}
+{"username":"312321","password":"F41lur3@","passwordAgain":"F41lur3@","email":"dsadsa@gg","phone":"6477454643"}
+{"username":"312321","password":"F41lur3@","passwordAgain":"F41lur3@","email":"dsadsa@gg","phone":"6477454643"}

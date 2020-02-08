@@ -1,9 +1,11 @@
+const fs = require('fs');
 const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
+
 const storage = require('./public/database/storage');
 const banners = require('./public/database/banners');
-
+const users = require('./public/database/users')
 const app = express();
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
@@ -46,11 +48,6 @@ app.get('/products/:name', (req, res) => {
             if (req.params.name == _product.name)
                 obj = {..._product};
         }
-        // res.render('products', {
-        //     isCategory: false,
-        //     name: category.name,
-        //     productsActive: true
-        // })
     }
 
     res.render('products', {
@@ -60,8 +57,33 @@ app.get('/products/:name', (req, res) => {
     })
 })
 
-app.post('/', (req,res) => {
+app.post('/login', (req,res) => {
+    fs.appendFile('./public/database/login.txt', `${JSON.stringify(req.body)}\n`, (err) => {
+        if(err) throw err;
+    });
+    
+    let userInfo;
+    for (user of users) {
+        if (req.body.username === user.username && req.body.password === user.password)
+            userInfo = {...user};
+    }
+
+    if(userInfo) {
+        res.render('form', {
+            user:userInfo,
+        })
+    } else {
+        res.render('form', {
+            error: 'User not found'
+        })
+    }
+})
+
+app.post('/register', (req,res) => {
+    fs.appendFile('./public/database/register.txt', `${JSON.stringify(req.body)}\n`, (err) => {
+        if(err) throw err;
+    });
     res.render('form', {
-        info:req.body
+        info:req.body,
     })
 })
