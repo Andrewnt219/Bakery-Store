@@ -1,0 +1,3 @@
+{"username":"user1","password":"F41lur3@Reminder","passwordAgain":"F41lur3@Reminder","email":"pnt20@gmail.com","phone":""}
+{"username":"dsa","password":"F41lur3@Reminder","passwordAgain":"F41lur3@Reminder","email":"pnt20@gmail.com","phone":"6477454643"}
+{"username":"dsa","password":"F41lur3@Reminder","passwordAgain":"F41lur3@Reminder","email":"pnt20@gmail.com","phone":"6477454643"}

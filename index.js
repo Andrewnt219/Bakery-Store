@@ -2,9 +2,9 @@ const fs = require('fs');
 const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
-const storage = require('./public/database/storage');
-const banners = require('./public/database/banners');
-const users = require('./public/database/users')
+const storage = require('./model/database/storage');
+const banners = require('./model/database/banners');
+const users = require('./model/database/users')
 
 const app = express();
 app.engine('handlebars', exphbs());
@@ -58,7 +58,7 @@ app.get('/products/:name', (req, res) => {
 })
 
 app.post('/login', (req,res) => {
-    fs.appendFile('./public/database/login.txt', `${JSON.stringify(req.body)}\n`, (err) => {
+    fs.appendFile('./model/database/login.txt', `${JSON.stringify(req.body)}\n`, (err) => {
         if(err) throw err;
     });
     
@@ -80,7 +80,7 @@ app.post('/login', (req,res) => {
 })
 
 app.post('/register', (req,res) => {
-    fs.appendFile('./public/database/register.txt', `${JSON.stringify(req.body)}\n`, (err) => {
+    fs.appendFile('./model/database/register.txt', `${JSON.stringify(req.body)}\n`, (err) => {
         if(err) throw err;
     });
     res.render('form', {

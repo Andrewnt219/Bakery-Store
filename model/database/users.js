@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 // for now, let use Sync, but it is surely not recommended
-let users = fs.readFileSync('./public/database/register.txt');
+let users = fs.readFileSync('./model/database/register.txt');
 users = String(users).split('\n');
 users.pop(); // remove the last unwanted element
 users = users.map(user => JSON.parse(user));
