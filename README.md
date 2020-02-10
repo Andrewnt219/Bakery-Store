@@ -2,8 +2,6 @@
 
 Prototype [here](https://andrew-bakery.herokuapp.com/)
 
-Welcome to **Andrew's Bakery !**  This is a fully functional website with:
-
 ## Overall Layouts
 
 #### Navigation
@@ -61,8 +59,8 @@ Welcome to **Andrew's Bakery !**  This is a fully functional website with:
 #### Single Product
 
 - Product's category
-- Product's information
-  - Rating change color at 4.0
+- *Product* object provides information
+- Rating change color at 4.0
 
 ## Login
 
@@ -75,5 +73,5 @@ Welcome to **Andrew's Bakery !**  This is a fully functional website with:
 - Pop up form
 - Visualized requirements for password
 - Client-side validation
-- Add new account to database (only available on local machine version)
+- Add new account to database (only available on local machine version, restart the web service to update changes)
 

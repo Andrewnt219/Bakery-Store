@@ -64,10 +64,10 @@ app.post('/login', (req,res) => {
     
     let userInfo;
     for (user of users) {
-        if (req.body.username === user.username && req.body.password === user.password)
+        if (req.body.username === user.username && req.body.password === user.password) {
             userInfo = {...user};
+        }
     }
-
     if(userInfo) {
         res.render('form', {
             user:userInfo,

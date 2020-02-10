@@ -1,13 +1,1 @@
-{"username":"iLike","password":"1102"}
-{"username":"iLike","password":"1102"}
-{"username":"iLike","password":"1102"}
-{"username":"dada","password":"dasd"}
-{"username":"dsa","password":"F41lur3@Reminder"}
-{"username":"dsa","password":"dsad"}
-{"username":"dsa","password":"F41lur3@Reminder"}
-{"username":"dsad","password":"dsad"}
-{"username":"dsa","password":"dad"}
-{"username":"dsa","password":"F41lur3@Reminder"}
-{"username":"dsa","password":"F41lur3@Reminder"}
-{"username":"dsa","password":"F41lur3@Reminder"}
-{"username":"dsa","password":"dsadasda"}
+{"username":"user1","password":"F41lur3@Reminder"}
