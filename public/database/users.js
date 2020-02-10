@@ -13,5 +13,5 @@ users = users.map(user => JSON.parse(user));
     users.pop(); // remove the last unwanted element
     users = users.map(user => JSON.parse(user));
 }) */
-console.log(users.length);
+
 module.exports = users;

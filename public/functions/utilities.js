@@ -84,7 +84,6 @@ function display(e) {
     const requiredInput = register.querySelectorAll('input[required]')
     requiredInput.forEach(input => {
         const requiredLabel = register.querySelector(`label[for=${input.name.trim()}]`);
-        console.log(requiredLabel);
         requiredLabel.innerHTML += '<span class="required">*</span>'
     })
 })();
@@ -106,6 +105,18 @@ function display(e) {
     register.insertBefore(checkList, position);
 })();
 
+/* Add navActive to current category */
+(function() {
+    const nav = document.querySelector('#productsNav');
+    const anchors = nav.querySelectorAll('a');
+
+    if(nav) {
+        for(let a of anchors) {
+            if (a.dataset.category === nav.dataset.category)
+                a.classList.add('navActive');
+        }
+    }
+})()
 /* form validation */
 function visualizedRequirement() {
     const password = register.password.value;

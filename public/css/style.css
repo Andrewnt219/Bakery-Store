@@ -51,9 +51,10 @@ nav a {
     justify-content: center;
     transition: 0.5s;
 }
-nav a:hover{
+nav a:hover, .navActive{
     background-color: var(--pink);
     font-size: 2rem;
+    opacity: 1;
 }
 nav li {
     list-style: none;
@@ -252,7 +253,7 @@ form {
     margin-bottom: 2rem;
 }
 .product {
-    width: 60%;
+    width: 65%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -281,7 +282,7 @@ form {
 .productName {
     font-size: 2rem;
     margin: 0;
-    color: whitesmoke;
+    color: var(--pink);
     max-width: 250px;
 }
 
@@ -299,17 +300,33 @@ form {
 }
 
 /* Category */
+#productsPage {
+    display:grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+#productsPage nav {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+}
+#productsPage nav a {
+    border-radius: 5px;
+    margin: 0.2rem 0;
+}
 .productList {
-    width: 80%;
+    flex: 10;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 300px);
+    column-gap: 0.5rem;
     row-gap: 1rem;
 
 }
+
 .productList img {
-    width: 350px;
-    height: 300px;
+    width: 300px;
+    height: 250px;
     border-radius: 5%;
 }
 img:hover {
@@ -410,3 +427,6 @@ span.required {
     margin: 0.5rem 0;
 }
 
+.unActive {
+    opacity: 0.7;
+}

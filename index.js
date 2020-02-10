@@ -2,17 +2,15 @@ const fs = require('fs');
 const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
-
 const storage = require('./public/database/storage');
 const banners = require('./public/database/banners');
 const users = require('./public/database/users')
+
 const app = express();
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
-
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => console.log('Web Server is running at ' + PORT + ' ...'));
-
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: false}));
 
@@ -31,6 +29,7 @@ app.get('/products', (req, res) => {
         title: 'Products',
         productsActive: true,
         obj: storage.products,
+        categories: storage.categories
     });
 })
 
@@ -49,11 +48,12 @@ app.get('/products/:name', (req, res) => {
                 obj = {..._product};
         }
     }
-
     res.render('products', {
+        location:req.params.name,
         obj:obj,
         productsActive: true,
-        title: obj.name
+        title: obj.name,
+        categories:storage.categories
     })
 })
 

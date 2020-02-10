@@ -23,7 +23,7 @@ class Product {
     constructor(name, price, bestSeller, src, category) {
         this.name = name || "404";
         this.price = price || 0;
-        this.bestSeller = bestSeller || false;
+        this.bestSeller = bestSeller || Math.round(Math.random() * 1);
         this.src = src || '__err_404';
         this.category = category || 'other';
         this.link = encodeURI(`/products/${this.name}`);
@@ -34,154 +34,154 @@ class Product {
 const product0 = new Product(
     'Pancake Brownies',
     5.99,
-    false,
+    Math.round(Math.random() * 1),
     '/img/products/bn-0.jpg',
     'Brownies'
 );
 const product1 = new Product(
     'Coconut Brownies',
     4.99,
-    false,
+    Math.round(Math.random() * 1),
     '/img/products/bn-1.jpg',
     'Brownies'
 );
 const product2 = new Product(
     'Fruit Brownies',
     5.99,
-    false,
+    Math.round(Math.random() * 1),
     '/img/products/bn-2.jpg',
     'Brownies'
 );
 const product3 = new Product(
     'Chocolate Brownies',
     6.99,
-    false,
+    Math.round(Math.random() * 1),
     '/img/products/bn-3.jpg',
     'Brownies'
 );
 const product4 = new Product(
     'Mini Brownies',
     8.99,
-    false,
+    Math.round(Math.random() * 1),
     '/img/products/bn-4.jpg',
     'Brownies'
 );
 const product5 = new Product(
     'Nut Brownies',
     9.99,
-    true,
+    Math.round(Math.random() * 1),
     '/img/products/bn-5.jpg',
     'Brownies'
 );
 const product6 = new Product(
     'Moon Cheese',
     8.99,
-    true,
+    Math.round(Math.random() * 1),
     '/img/products/cc-0.jpg',
     'Cheese Cakes'
 );
 const product7 = new Product(
     'Fruit Cheese',
     8.99,
-    false,
+    Math.round(Math.random() * 1),
     '/img/products/cc-1.jpg',
     'Cheese Cakes'
 );
 const product8 = new Product(
     'Loaf Cheese',
     12.99,
-    true,
+    Math.round(Math.random() * 1),
     '/img/products/cc-2.jpg',
     'Cheese Cakes'
 );
 const product9 = new Product(
     'Pie Cheese',
     4.99,
-    true,
+    Math.round(Math.random() * 1),
     '/img/products/cc-3.jpg',
     'Cheese Cakes'
 );
 const product10 = new Product(
     'Cupcake',
     3.99,
-    false,
+    Math.round(Math.random() * 1),
     '/img/products/o-0.jpg',
     'Others'
 );
 const product11 = new Product(
     'Donut',
     3.99,
-    true,
+    Math.round(Math.random() * 1),
     '/img/products/o-1.jpg',
     'Others'
 );
 const product12 = new Product(
     'Apple Pie',
     3.99,
-    true,
+    Math.round(Math.random() * 1),
     '/img/products/o-2.jpg',
     'Others'
 );
 const product13 = new Product(
     'Chocolate Parfait 1',
     7.99,
-    false,
+    Math.round(Math.random() * 1),
     '/img/products/pf-0.jpg',
     'Parfait'
 );
 const product14 = new Product(
     'Chocolate Parfait 2',
     7.99,
-    false,
+    Math.round(Math.random() * 1),
     '/img/products/pf-1.jpg',
     'Parfait'
 );
 const product15 = new Product(
     'Cream Brownies',
     8.49,
-    false,
+    Math.round(Math.random() * 1),
     '/img/products/bn-6.jpg',
     'Brownies'
 );
 const product16 = new Product(
     'Brown Brownies',
     8.49,
-    true,
+    Math.round(Math.random() * 1),
     '/img/products/bn-7.jpg',
     'Brownies'
 );
 const product17 = new Product(
     'Toasty Yogurt',
     4.99,
-    false,
+    Math.round(Math.random() * 1),
     '/img/products/yg-0.jpg',
     'Yogurt'
 );
 const product18 = new Product(
     'Japanese Yogurt',
     4.99,
-    true,
+    Math.round(Math.random() * 1),
     '/img/products/yg-1.jpg',
     'Yogurt'
 );
 const product19 = new Product(
     'Fruit Yogurt',
     4.99,
-    false,
+    Math.round(Math.random() * 1),
     '/img/products/yg-2.jpg',
     'Yogurt'
 );
 const product20 = new Product(
     'Ice Cream Yogurt',
     4.99,
-    false,
+    Math.round(Math.random() * 1),
     '/img/products/yg-3.jpg',
     'Yogurt'
 );
 const product21 = new Product(
     'Hyouka',
     4.99,
-    true,
+    Math.round(Math.random() * 1),
     '/img/products/yg-4.jpg',
     'Yogurt'
 );

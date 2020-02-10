@@ -1,6 +1,9 @@
+{{#if obj.category}}
 <section class="products">
-    {{#if obj.category}}
-    <a href="/products/{{obj.category}}"><h1>Category: {{obj.category}}</h1></a>
+    {{!-- If object has category prop then it is a product --}}
+    <a href="/products/{{obj.category}}">
+        <h1>Category: {{obj.category}}</h1>
+    </a>
     <article class="product">
         <div class="info">
             <h1 class="productName">{{obj.name}}</h1>
@@ -13,22 +16,30 @@
         </div>
         <img src="{{obj.src}}" alt="Product image">
     </article>
-
-    {{else if obj.name}}
-    <h1>Category: {{obj.name}}</h1>
-
-    {{/if}}
-
-    <article class="productList">
-        {{#each obj.products}}
-        <a href="{{this.link}}"><img title="{{this.name}}" src="{{this.src}}" alt="{{this.name}}"></a>
-        {{/each}}
-        {{#each obj}}
-        <a href="{{this.link}}"><img title="{{this.name}}" src="{{this.src}}" alt="{{this.name}}"></a>
-        {{/each}}
-    </article>
 </section>
 
+{{else}}
+{{#if obj.name}}
+<h1>Category: {{obj.name}}</h1>
+{{/if}}
+<section id="productsPage">
+<nav data-category="{{location}}" id="productsNav">
+    {{#each categories}}
+    <a data-category="{{this.name}}" href="/products/{{this.name}}"><p>{{this.name}}</p></a href=>
+    {{/each}}
+</nav>
+<article class="productList">
 
-{{!-- Insert Register and Login through variable --}}
-{{!-- Change category base on received variable, so I have to have a product page template and then just dynamically insert data --}}
+    {{!-- If a category is given --}}
+    {{#each obj.products}}
+    <a href="{{this.link}}"><img title="{{this.name}}" src="{{this.src}}" alt="{{this.name}}"></a>
+    {{/each}}
+
+    {{!-- If not a category --}}
+    {{#each obj}}
+    <a href="{{this.link}}"><img title="{{this.name}}" src="{{this.src}}" alt="{{this.name}}"></a>
+    {{/each}}
+</article>
+</section>
+{{/if}}
+
