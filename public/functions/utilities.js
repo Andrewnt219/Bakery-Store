@@ -49,6 +49,7 @@ const error = register.querySelector('.error');
 const registerButton = document.querySelector('#register-button');
 const loginButton = document.querySelector('#login-button');
 
+
 /* listeners */
 registerButton.addEventListener('click', display);
 loginButton.addEventListener('click', display);
@@ -117,6 +118,7 @@ function display(e) {
         }
     }
 })()
+
 /* form validation */
 function visualizedRequirement() {
     const password = register.password.value;
@@ -183,7 +185,6 @@ function registerValidation(e) {
         addError(errors,register);
     }
 }
-
 // function loginValidation(e) {
 //     const username = login.username.value.trim();
 //     const password = login.password.value.trim();
