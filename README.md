@@ -4,73 +4,73 @@ Prototype [here](https://andrew-bakery.herokuapp.com/)
 
 Welcome to **Andrew's Bakery !**  This is a fully functional website with:
 
-### Overall Layouts
+## Overall Layouts
 
-##### Navigation
+#### Navigation
 
 - Classic flex navigation
 - Highlight selection
 - Highlight current page
 
-##### Store Front
+#### Store Front
 
 - Centered logo and store's name
 
-##### Main
+#### Main
 
 - Home or Products
 
-##### Footer
+#### Footer
 
 - Media
 - Terms & Conditions
 - Credits
 
-### Home Page
+## Home Page
 
-##### Promotion Banner
+#### Promotion Banner
 
 - "Borrow" from Walmart since other landscape images with `max-width: 100%` will be enormous.
 
-##### Categories
+#### Categories
 
 - Two columns grid
 - Inside each grid, a *Category* class object: image, title, description, link
 
-##### Best Sellers
+#### Best Sellers
 
 - Horizontally scrollable
 - Custom scrollbar
 - Clickable images, link to single product display
 
-### Products
+## Products
 
-##### Category name
+#### Category name
 
 - If exist 
 
-##### Sidebar
+#### Sidebar
 
 - Display all categories
 - Highlight current category
 
-##### Products List
+#### Products List
 
 - Grid items
 
-##### Single Product
+#### Single Product
 
 - Product's category
 - Product's information
   - Rating change color at 4.0
 
-### Login
+## Login
 
 - Pop up form
 - Server-side login authentication
 - Login log
 
-### Register
+## Register
 
 - Pop up form
 - Visualized requirements for password
