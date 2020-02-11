@@ -1,4 +1,5 @@
 /* data */
+// import users from '../model/database/users';
 /* !regex --> error */
 /* Add new requirement here */
 const verifiers = [
@@ -170,34 +171,25 @@ function registerValidation(e) {
     // This is still need to manually added
     const goodPassword = /(?=\S{8,16})(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+=\-,.<>?\/\[\]{};:'"])(?!.*\s)/
 
+    const username = register.username.value;
     const password = register.password.value;
     const passwordAgain = register.passwordAgain.value;
-
-    if (goodPassword.test(password) && password === passwordAgain)
+    let exist = false;
+    for (u of users) {
+        if(u.username == username)
+            exist = true;
+    }
+    if (goodPassword.test(password) && password === passwordAgain/*  && !exist */)
         return true;
     else {
         e.preventDefault();
         let errors = [];
         if (!goodPassword.test(password))
-            errors.push('Password\'s requirement(s) are not fulfilled!')
+            errors.push('Password\'s requirement(s) are not fulfilled!');
         if (password !== passwordAgain)
             errors.push("Password does not match!");
+/*         if (exist)
+            errors.push("Username already exist"); */
         addError(errors,register);
     }
 }
-// function loginValidation(e) {
-//     const username = login.username.value.trim();
-//     const password = login.password.value.trim();
-//     const _username = "iLike"
-//     const _password = "1102"
-
-    
-//     const valid = username === _username && password === _password;
-
-//     if (!valid) {
-//         e.preventDefault();
-//         addError(["Username or password is incorrect!"], login);
-//     }
-//     else
-//         return true;
-// }   
