@@ -1,4 +1,2 @@
 {"username":"user1","password":"F41lur3@Reminder"}
 {"username":"dsa","password":"F41lur3@Reminder"}
-{"username":"tonyvu","password":"Aq1234$11"}
-{"username":"dsa11","password":"F41lur3@Reminder"}

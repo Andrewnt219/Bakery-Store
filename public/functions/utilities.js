@@ -55,8 +55,7 @@ registerButton.addEventListener('click', display);
 loginButton.addEventListener('click', display);
 register.addEventListener('submit', registerValidation);
 // login.addEventListener('submit', loginValidation);
-register.password.addEventListener('change', visualizedRequirement);
-register.passwordAgain.addEventListener('change', visualizedRequirement);
+register.password.addEventListener('change', visualizedRequirement)
 
 /* functions */
 /* - show/hide section.:is(register/login)
@@ -92,7 +91,7 @@ function display(e) {
 
 /* Add password requirements */
 (function () {
-    // Create checklist for password into DOM
+    // Create checklist into DOM
     const checkList = document.createElement('div');
     checkList.id = "passwordCheckList";
     verifiers.forEach(verifier => {
@@ -105,22 +104,14 @@ function display(e) {
     })
     const position = register.querySelector('label[for="passwordAgain"]');
     register.insertBefore(checkList, position);
-
-    // Create passwordAgain check
-    const checkAgain = document.createElement('div');
-    checkAgain.id = "checkAgain";
-    checkAgain.innerHTML = '<i class="fas fa-check"></i> Password matches'
-    const positionAgain = register.querySelector('label[for="email"]');
-    register.insertBefore(checkAgain, positionAgain);
 })();
 
 /* Add navActive to current category */
 (function() {
     const nav = document.querySelector('#productsNav');
-    
+    const anchors = nav.querySelectorAll('a');
 
     if(nav) {
-        const anchors = nav.querySelectorAll('a');
         for(let a of anchors) {
             if (a.dataset.category === nav.dataset.category)
                 a.classList.add('navActive');
@@ -154,15 +145,6 @@ function visualizedRequirement() {
                 break;
         }
     }
-
-    const passwordAgain = register.passwordAgain.value;
-    const checkAgain = register.querySelector('#checkAgain');
-    console.log(checkAgain);
-    console.log(passwordAgain === password, passwordAgain, password);
-    if (passwordAgain !== password)
-        checkAgain.classList.remove('check');
-    else
-        checkAgain.classList.add('check');
 
 }
 

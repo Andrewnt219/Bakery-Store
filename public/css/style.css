@@ -204,17 +204,16 @@ form {
     margin:auto;
 }
 
-#passwordCheckList, #checkAgain {
+#passwordCheckList {
     grid-column: 1/3;
 }
-
 
 .register .error {
     grid-column: 1/3;
 }
 
 
-.checkList, #checkAgain {
+.checkList {
     opacity: 0.5;
 }
 
@@ -416,7 +415,9 @@ input[type="submit"]:hover {
     color: aquamarine;
 }
 
-
+.check {
+    opacity: 1;
+}
 
 span.required {
     font-weight: 900;
