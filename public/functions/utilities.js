@@ -110,9 +110,9 @@ function display(e) {
 /* Add navActive to current category */
 (function() {
     const nav = document.querySelector('#productsNav');
-    const anchors = nav.querySelectorAll('a');
-
+    
     if(nav) {
+        const anchors = nav.querySelectorAll('a');
         for(let a of anchors) {
             if (a.dataset.category === nav.dataset.category)
                 a.classList.add('navActive');
