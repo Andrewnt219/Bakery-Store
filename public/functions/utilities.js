@@ -56,6 +56,7 @@ loginButton.addEventListener('click', display);
 register.addEventListener('submit', registerValidation);
 // login.addEventListener('submit', loginValidation);
 register.password.addEventListener('change', visualizedRequirement)
+register.passwordAgain.addEventListener('change', visualizedRequirement)
 
 /* functions */
 /* - show/hide section.:is(register/login)
@@ -146,6 +147,13 @@ function visualizedRequirement() {
         }
     }
 
+    const checkAgain = register.querySelector('#checkAgain');
+    const passwordAgain = register.passwordAgain.value;
+
+    if(password !== passwordAgain)
+        checkAgain.style.opacity = '0.5';
+    else
+        checkAgain.style.opacity = '1';
 }
 
 // create error <p> in errorDiv

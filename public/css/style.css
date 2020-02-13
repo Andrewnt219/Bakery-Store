@@ -40,6 +40,10 @@ nav {
     justify-content: space-around;
     height: 3rem;
     background: inherit;
+    position:sticky;
+    top:0;
+    left:0;
+    z-index: 1;
 }
 nav a {
     cursor: pointer;
@@ -204,7 +208,7 @@ form {
     margin:auto;
 }
 
-#passwordCheckList {
+#passwordCheckList, #checkAgain {
     grid-column: 1/3;
 }
 
